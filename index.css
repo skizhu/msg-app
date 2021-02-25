@@ -1,0 +1,109 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+body{
+    background-color:#282c34;
+    color:#fff;
+    margin:0;
+    transition:2s;
+    -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2.5s; /* Firefox < 16 */
+        -ms-animation: fadein 2.5s; /* Internet Explorer */
+         -o-animation: fadein 2.5s; /* Opera < 12.1 */
+            animation: fadein 2.5s;
+}
+.copyrightContainer{
+    position: fixed;
+    left: 50%;
+    bottom: 0.2rem;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+.copyrightContainerText{
+    display:flex;
+    margin:0 auto;
+    justify-content: center;
+}
+.messagesContainer{
+    margin:0 auto;
+    border:2px solid red;
+    width:50%;
+    height:25%;
+    margin-top:2rem;
+}
+#messagesHeader{
+    font-size:2rem;
+}
+.addMessageContainer{
+    margin-bottom:0.5rem;
+}
+#messageInput{
+    width: 25%;
+    border-radius:50px;
+    padding:0;
+    border:0px solid red;
+}
+#sendButton:focus , #messageInput:focus{
+    outline: none;
+    box-shadow: none;
+  }
+#sendButton{
+    color:#fff;
+    background-color:#282c34;
+    border:2px solid red;
+    font-weight:800;
+    padding:.25rem;
+    line-height:1.5;
+    border-radius:50px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+.welcomeMessage, #messagesHeader, .addMessageContainer, .addMessageContainer > *{
+    text-align: center;
+}
+#welcomeMessageName{
+    padding:0.5rem;
+    font-weight:800;
+}
+.welcomeMessageSpan{
+    padding:0.5rem;
+    text-align: left;
+}
+.msg-span{
+    padding:0.5rem;
+    text-align: left;
+    border:2px solid red;
+    border-radius:50px;
+}
+.isMsg{
+    padding:2px;
+    text-align:right;
+    margin-right:1rem;
+}
+.myMsg{
+    color:red;
+}
+.msg{
+    color:#fff;
+}
